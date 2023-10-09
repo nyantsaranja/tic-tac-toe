@@ -117,10 +117,10 @@
         // Fonction pour effectuer un mouvement (clic sur une cellule)
         function makeMove(index) {
             if (gameOver){
-                displayResult('La partie est terminée !');
+                displayResult('La partie est terminee !');
                 return;
             }else if(cells[index].textContent !== ''){
-                displayResult('Cette case est déjà prise !');
+                displayResult('Cette case est deja prise !');
                 return;
             }
 
@@ -129,7 +129,7 @@
             if (checkWinner(currentPlayer)) {
                 gameOver = true;
                 let winnerName = currentPlayer === 'X' ? 'Le joueur' : 'L\'ordinateur';
-                displayResult(`${winnerName} a gagné !`);
+                displayResult(`${winnerName} a gagne !`);
             } else if (isBoardFull()) {
                 displayResult('Match nul !');
             } else {
